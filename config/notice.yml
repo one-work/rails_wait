@@ -1,0 +1,4 @@
+Notice::Announcement:
+  default:
+    only: ['position']
+    methods: ['state_i18n', 'address']

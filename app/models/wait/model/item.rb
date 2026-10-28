@@ -12,11 +12,6 @@ module Wait
       belongs_to :list, counter_cache: true
 
       after_save_commit :to_notice, if: -> { saved_change_to_volunteer_id? && volunteer }
-      acts_as_notify(
-        :default,
-        only: [:position],
-        methods: [:state_i18n, :address]
-      )
     end
 
     def address
